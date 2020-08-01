@@ -280,7 +280,7 @@ if (isset($_POST['login']))
 
 ?>
   	<script>
-       alert('Username or Password doesn't match !!');
+       alert('Username or Password does not match !!');
        window.open('login.php','_self'); 
     </script>
     <h1>Error</h1>
