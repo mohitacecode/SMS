@@ -69,7 +69,7 @@ body {
 <ul>
   <li><a href="login.php">Admin Login</a></li>
   <li><a class="active" href="index.php">HomePage</a></li>
-  <li><a href="wall.php">Student Wall</a></li>
+  <li><a href="wallPage.php">Student Wall</a></li>
 </ul>
 <div>
 

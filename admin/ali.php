@@ -97,7 +97,7 @@ include('titlehead.php');
 		</tr>
 	    <tr>
 			<td>jee DoR </td>
-			<td><input type="text" name="jeeDoR" placeholder="Enter jee Date of registration" required/> </td>
+			<td><input type="date" name="jeeDoR" placeholder="Enter jee Date of registration" required/> </td>
 		</tr>
 		<tr>
 			<td>otherDegName </td>
@@ -125,7 +125,7 @@ include('titlehead.php');
 		</tr>
 		<tr>
 			<td>otherDoR </td>
-			<td><input type="text" name="otherDoR" placeholder="Enter other date of registration" required/> </td>
+			<td><input type="date" name="otherDoR" placeholder="Enter other date of registration" required/> </td>
 		</tr>
 	</table>
 	<input type="submit" value="submit" name = "submit" id = "submit">	
@@ -164,7 +164,7 @@ if (isset($_POST['submit'])) {
 	$otherBoard=$_POST['otherBoard'];
 	$otherDoR=$_POST['otherDoR'];
 
-	$qry = "INSERT INTO `studentPrevRecord`(`studentID`, `tenthDivision`, `tenthObtMarks`, `tenthTotMarks`, `tenthPercent`,`tenthBoard`,`tenthDoR`,`twelveDegName`,`twelveObtMarks`,`twelveTotMarks`,`TwelvePercent`,`TwelveDoR`,`jeeExamID`,`jeeTotalScore`,`jeeCRLRank`,`jeeCasteRank`,`jeeStateCode`,`jeeDoR`,`otherDegName`,`otherDivision`,`otherObtMarks`,`otherTotMarks`,`otherPercent`,`otherBoard`,`otherDoR`) VALUES ('$rollno','$tenthdivision','$tenthObtMarks','$tenthTotMarks','$tenthPercent','$tenthBoard','$tenthDoR','$tweleveDegName','$tweleveDivision','$twelveObtMarks','$tweleveTotMarks','$TwelvePercent','$TwelveDoR','$jeeExamID','$jeeTotalScore','$jeeCRLRank','$jeeCasteRank','$jeeStateCode','$jeeDoR','$otherDegName','$otherDivision','$otherObtMarks','$otherTotMarks','$otherPercent','$otherBoard','$otherDoR')";
+	$qry = "INSERT INTO `prev`(`studentID`, `tenthDivision`, `tenthObtMarks`, `tenthTotMarks`, `tenthPercent`,`tenthBoard`,`tenthDoR`,`twelveDegName`,`twelveObtMarks`,`twelveTotMarks`,`TwelvePercent`,`TwelveDoR`,`jeeExamID`,`jeeTotalScore`,`jeeCRLRank`,`jeeCasteRank`,`jeeStateCode`,`jeeDoR`,`otherDegName`,`otherDivision`,`otherObtMarks`,`otherTotMarks`,`otherPercent`,`otherBoard`,`otherDoR`, `twelveDivision`) VALUES ('$rollno','$tenthdivision','$tenthObtMarks','$tenthTotMarks','$tenthPercent','$tenthBoard','$tenthDoR','$tweleveDegName','$twelveObtMarks','$tweleveTotMarks','$TwelvePercent','$TwelveDoR','$jeeExamID','$jeeTotalScore','$jeeCRLRank','$jeeCasteRank','$jeeStateCode','$jeeDoR','$otherDegName','$otherDivision','$otherObtMarks','$otherTotMarks','$otherPercent','$otherBoard','$otherDoR', '$tweleveDivision')";
 
 	$run = mysqli_query($con,$qry); 
 	echo $run;

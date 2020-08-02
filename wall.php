@@ -95,15 +95,25 @@ li a:hover:not(.active) {
 .active {
   background-color: #4CAF50;
 }
+h1 {text-align:center;}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
 </style>
 <body>
-<ul>
-  <li><a href="login.php">Admin Login</a></li>
-  <li><a href="index.php">HomePage</a></li>
-  <li><a class="active" href="wall.php">Student Wall</a></li>
-</ul>
+<h4><a href="wallPage.php" style="float:left;margin-right:30px; color:#fff;font-size:20px"><button class = "button">Back To Student wall</button></a></h4>
 <h1> Post on Student Wall</h1>
-<form method="post" action="index.php" enctype="multipart/form-data">
+<form method="post" action="wall.php" enctype="multipart/form-data">
 	<table border="1"  style="line-height: 140%; width: 100%; color:black; text-align: center;font-style: italic;" >
 		<tr>
 			<td>Student Id</td>
@@ -156,13 +166,13 @@ li a:hover:not(.active) {
 <?php
 
 if (isset($_POST['submit'])) {
-	include('../dbcon.php');
+	include('dbcon.php');
 	$Name=$_POST['Name'];
 	$sem=$_POST['sem'];
 	$rollno=$_POST['rollno'];
 	$dept=$_POST['dept'];
-	$msg="<pre>$msg</pre>";
-	$qry = "INSERT INTO `student`(`studentId`, `Name`, `semester`,`department`, `msg`) VALUES ('$rollno','$Name','$sem','$dept','$msg')";
+	$msg=$_POST['msg'];
+	$qry = "INSERT INTO `wall`(`studentId`, `Name`, `semester`,`department`, `msg`) VALUES ('$rollno','$Name','$sem','$dept','$msg')";
 
 	$run = mysqli_query($con,$qry);
 	echo $run;

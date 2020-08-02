@@ -235,7 +235,7 @@ li a:hover:not(.active) {
 <ul>
   <li><a class="active" href="#home">Admin Login</a></li>
   <li><a href="index.php">HomePage</a></li>
-  <li><a href="wall.php">Student Wall</a></li>
+  <li><a href="wallPage.php">Student Wall</a></li>
 </ul>
 <div class="login-box">
   <h2>Login</h2>
