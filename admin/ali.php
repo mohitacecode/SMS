@@ -164,8 +164,13 @@ if (isset($_POST['submit'])) {
 	$otherBoard=$_POST['otherBoard'];
 	$otherDoR=$_POST['otherDoR'];
 
-	$qry = "INSERT INTO `prev`(`studentID`, `tenthDivision`, `tenthObtMarks`, `tenthTotMarks`, `tenthPercent`,`tenthBoard`,`tenthDoR`,`twelveDegName`,`twelveObtMarks`,`twelveTotMarks`,`TwelvePercent`,`TwelveDoR`,`jeeExamID`,`jeeTotalScore`,`jeeCRLRank`,`jeeCasteRank`,`jeeStateCode`,`jeeDoR`,`otherDegName`,`otherDivision`,`otherObtMarks`,`otherTotMarks`,`otherPercent`,`otherBoard`,`otherDoR`, `twelveDivision`) VALUES ('$rollno','$tenthdivision','$tenthObtMarks','$tenthTotMarks','$tenthPercent','$tenthBoard','$tenthDoR','$tweleveDegName','$twelveObtMarks','$tweleveTotMarks','$TwelvePercent','$TwelveDoR','$jeeExamID','$jeeTotalScore','$jeeCRLRank','$jeeCasteRank','$jeeStateCode','$jeeDoR','$otherDegName','$otherDivision','$otherObtMarks','$otherTotMarks','$otherPercent','$otherBoard','$otherDoR', '$tweleveDivision')";
-
+	$qry = "INSERT INTO `prev`(`studentID`, `tenthDivision`, `tenthObtMarks`, `tenthTotMarks`, `tenthPercent`,`tenthBoard`,`tenthDoR`,`twelveDegName`,`twelveObtMarks`,`twelveTotMarks`,`TwelvePercent`,`TwelveDoR`,`jeeExamID`,`jeeTotalScore`,`jeeCRLRank`,`jeeCasteRank`,`jeeStateCode`,`jeeDoR`,`otherDegName`,`otherDivision`,`otherObtMarks`,`otherTotMarks`,`otherPercent`,`otherBoard`,`otherDoR`, `twelveDivision`) VALUES ('$rollno','$tenthdivision','$tenthObtMarks','$tenthTotMarks','$tenthPercent','$tenthBoard','$tenthDoR','$twelveDegName','$twelveObtMarks','$twelveTotMarks','$TwelvePercent','$TwelveDoR','$jeeExamID','$jeeTotalScore','$jeeCRLRank','$jeeCasteRank','$jeeStateCode','$jeeDoR','$otherDegName','$otherDivision','$otherObtMarks','$otherTotMarks','$otherPercent','$otherBoard','$otherDoR', '$twelveDivision')";
+	?>
+	<script>
+	console.log(<?php echo $qry;?>)
+	alert(<?php echo $qry;?>)
+	</script>
+	<?php
 	$run = mysqli_query($con,$qry); 
 	echo $run;
 	if ($run==TRUE) {
