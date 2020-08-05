@@ -96,11 +96,11 @@ include('titlehead.php');
 		</tr>
 		<tr>
 			<td>Mobile No.</td>
-			<td><input type="text" name="mobile" placeholder="Enter Mobile Number" required/> </td>
+			<td><input type="tel" name="mobile" placeholder="Enter Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required/> </td>
 		</tr>
 		<tr>
 			<td>Parents Mobile No.</td>
-			<td><input type="text" name="parentNumber" placeholder="Enter Parents Mobile" required/> </td>
+			<td><input type="tel" name="parentNumber" placeholder="Enter Parents Mobile" required pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/> </td>
 		</tr>
 		<tr>
 			<td>Email-Id</td>

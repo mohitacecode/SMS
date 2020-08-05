@@ -45,7 +45,7 @@ $data =mysqli_fetch_assoc($run);
 			<td><input type="date" name="dob" value=<?php echo $data['dob'];?>> </td>
 		</tr>
 		<tr>
-			<td>Mobile No.</td>
+			<td>Gender</td>
 			<td><input type="text" name="gender" value=<?php echo $data['gender'];?>/> </td>
 		</tr>
 		<tr>
@@ -69,11 +69,11 @@ $data =mysqli_fetch_assoc($run);
 			<td><input type="text" name="religion" value=<?php echo $data['religion'];?>/> </td>
 		</tr>
 		<tr>
-			<td>Mobile No.</td>
-			<td><input type="text" name="sem" value=<?php echo $data['semester'];?>/> </td>
+			<td>Semester</td>
+			<td><input  type="text" name="sem" value=<?php echo $data['semester'];?>/> </td>
 		</tr>
 		<tr>
-			<td>Mobile No.</td>
+			<td>Department</td>
 			<td><input type="text" name="dept" value=<?php echo $data['department'];?>/> </td>
 		</tr>
 		<tr>
@@ -82,7 +82,7 @@ $data =mysqli_fetch_assoc($run);
 		</tr>
 		<tr>
 			<td>Parents Mobile No.</td>
-			<td><input type="text" name="parentNumber" value=<?php echo $data['parentNumber'];?>/> </td>
+			<td><input type="tel" name="parentNumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value=<?php echo $data['parentNumber'];?>/> </td>
 		</tr>
 		<tr>
 			<td>Email-Id</td>
