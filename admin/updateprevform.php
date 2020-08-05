@@ -14,6 +14,9 @@ session_start();
 
 include('header.php');
 include('titlehead.php');
+?>
+</div>
+<?php
 include('../dbcon.php');
 $sid =$_GET['sid'];
 $sql ="SELECT * FROM `prev` WHERE studentId='$sid'";
@@ -21,7 +24,7 @@ $run = mysqli_query($con,$sql);
 $data =mysqli_fetch_assoc($run);
 
 ?>
-<form method="post" action="updatedata.php" enctype="multipart/form-data">
+<form method="post" action="updateprevdata.php" enctype="multipart/form-data">
 	<table border="1"  style="line-height: 140%; width: 100%; color:black; text-align: center;font-style: italic;" >
     <tr>
 			<td>Student Id</td>

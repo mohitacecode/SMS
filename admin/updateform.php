@@ -21,6 +21,7 @@ $run = mysqli_query($con,$sql);
 $data =mysqli_fetch_assoc($run);
 
 ?>
+</div>
 <form method="post" action="updatedata.php" enctype="multipart/form-data">
 	<table border="1"  style="line-height: 140%; width: 100%; color:black; text-align: center;font-style: italic;" >
 		<tr>

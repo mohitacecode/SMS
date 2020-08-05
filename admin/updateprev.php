@@ -17,16 +17,20 @@ include('titlehead.php');
 
 ?>
 
-<div>
-<table>
-<form ation="updateprev.php" method="post">
+</div>
+<div style="margin: 0 auto;">
+<table style="margin: 0 auto;">
+<form action="updateprev.php" method="post">
 	<tr>
 		<th style="color: black">Enter Student Id</th>
 		<td><input type="number" name="studentId" placeholder="ID" required/></td>
 	</tr>
+	<td colspan="2"><input type="submit" name="submit" value="search"></td>
+	</tr>
 	
 </form>
 </table>
+</div>
 <table align="center" width="100%" border="1">
 	<tr style="background-color: #000;color: #fff">
 		<th>Student Id</th>
@@ -59,7 +63,7 @@ include('titlehead.php');
 if (isset($_POST['submit'])) {
 	include('../dbcon.php');
 	$studentId =$_POST['studentId'];
-	$sql="SELECT * FROM `student` WHERE `studentId`='$standerd' AND `fName` LIKE '%$firstName%' AND `lName` LIKE '%$lastName%'";
+	$sql="SELECT * FROM `prev` WHERE `studentId`='$studentId'";
 	$run = mysqli_query($con,$sql);   
 	if (mysqli_num_rows($run)<1) {
 		echo "<tr><td colspan='5'>No Record Found</td></tr>";
@@ -96,7 +100,7 @@ if (isset($_POST['submit'])) {
 					<td><?php echo $data['otherPercent'];?></td>
 					<td><?php echo $data['otherBoard'];?></td>
 					<td><?php echo $data['otherDoR'];?></td>
-                    <td><a href="updateprevform.php?sid=<?php echo $data['studentId'];?>">Edit</a></td>
+                    <td><a href="updateprevform.php?sid=<?php echo $data['studentID'];?>">Edit</a></td>
 			</tr>
 
 			<?php
@@ -106,6 +110,6 @@ if (isset($_POST['submit'])) {
 ?>
 
 </table>
-</div>
+
 </body>
 </html>

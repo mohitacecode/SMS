@@ -19,7 +19,8 @@ include('titlehead.php');
 
 <div>
 <table>
-<form ation="updatestudent.php" method="post">
+<div style="margin: 0 auto;">
+<form action="updatestudent.php" method="post">
 	<tr>
 		<th style="color: black">Enter Student Id</th>
 		<td><input type="number" name="standerd" placeholder="standerd" required/></td>
@@ -31,6 +32,7 @@ include('titlehead.php');
 	</tr>
 	
 </form>
+</div>
 </table>
 <table align="center" width="100%" border="1">
 	<tr style="background-color: #000;color: #fff">

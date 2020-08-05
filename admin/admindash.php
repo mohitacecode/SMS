@@ -36,8 +36,12 @@ include('titlehead.php');
 			<button class = "button">Delete Student</button></a></td></a> </td>
 		</tr>
 		<tr>
-			<td>3.</td>
+			<td>4.</td>
 			<td><a href="ali.php"><button class = "button">Insert Student Previous Record</button></a></td></a> </td>
+		</tr>
+		<tr>
+			<td>5.</td>
+			<td><a href="updateprev.php"><button class = "button">Update Update Previous Record</button></a></td></a> </td>
 		</tr>
 	</table>
 	

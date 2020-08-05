@@ -1,7 +1,7 @@
 <?php
 
     include('../dbcon.php');
-    $rollno=$_POST['rollno'];
+    $studentId = $_POST['rollno'];
     $tenthdivision=$_POST['tenthdivision'];
     $tenthObtMarks=$_POST['tenthObtMarks'];
     $tenthTotMarks=$_POST['tenthTotMarks'];
@@ -27,7 +27,7 @@
     $otherPercent=$_POST['otherPercent'];
     $otherBoard=$_POST['otherBoard'];
     $otherDoR=$_POST['otherDoR'];
-	$qry = "UPDATE `prev` SET `rollno` = '$rollno', `name` = '$name', `city` = '$city', `pcont` = '$pcont', `standard` = '$std' WHERE `id` = '$id' ";
+	$qry = "UPDATE `prev` SET `tenthdivision` = '$tenthdivision', `tenthObtMarks` = '$tenthObtMarks', `tenthTotMarks` = '$tenthTotMarks', `tenthPercent` = '$tenthPercent', `tenthBoard` = '$tenthBoard', `tenthDoR` = '$tenthDoR', `twelveDegName` = '$twelveDegName', `twelveDivision` = '$twelveDivision', `twelveObtMarks` = '$twelveObtMarks', `twelveTotMarks` = '$twelveTotMarks', `TwelvePercent` = '$TwelvePercent', `TwelveDoR` = '$TwelveDoR', `jeeExamID` = '$jeeExamID', `jeeTotalScore` = '$jeeTotalScore', `jeeCRLRank` = '$jeeCRLRank', `jeeCasteRank` = '$jeeCasteRank', `jeeStateCode` = '$jeeStateCode', `jeeDoR` = '$jeeDoR', `otherDegName` = '$otherDegName', `otherDivision` = '$otherDivision', `otherObtMarks` = '$otherObtMarks', `otherTotMarks` = '$otherTotMarks', `otherBoard` = '$otherBoard', `otherDoR` = '$otherDoR' WHERE `studentID` = '$studentId' ";
 
 	
 	$run = mysqli_query($con,$qry); 
@@ -37,7 +37,7 @@
 
 		<script>
 			alert('Data Updated Successfully');
-			window.open('updateform.php?sid=<?php echo $id?>','_self');
+			window.open('updateprevform.php?sid=<?php echo $studentId?>','_self');
 		</script>
 		<?php
 	}

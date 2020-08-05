@@ -21,7 +21,7 @@ include('titlehead.php');
 <table>
 <form ation="deletestudent.php" method="post">
 	<tr>
-		<th style="color: black">Enter Standard</th>
+		<th style="color: black">Enter Semester</th>
 		<td><input type="number" name="standerd" placeholder="standerd" required/></td>
 		<th style="color: black">Student First Name</th>
 		<td><input type="text" name="stufname" placeholder="Student First Name" required/></td>
