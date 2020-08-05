@@ -108,7 +108,24 @@ $data =mysqli_fetch_assoc($run);
 			<td>otherDivision </td>
 			<td><input type="text" name="otherDivision" value=<?php echo $data['otherDivision'];?> required/> </td>
 		</tr>
-	
+		<tr>
+			<td>otherObtMarks </td>
+			<td><input type="text" name="otherObtMarks" value=<?php echo $data['otherObtMarks'];?> required/> </td>
+		</tr>
+		<tr>
+			<td>otherTotMarks </td>
+			<td><input type="text" name="otherTotMarks" value=<?php echo $data['otherTotMarks'];?> required/> </td>
+		</tr>
+		<tr>
+			<td>otherPercent </td>
+			<td><input type="text" name="otherPercent" value=<?php echo $data['otherPercent'];?> required/> </td>
+		</tr>
+		<tr>
+			<td>otherBoard </td>
+			<td><input type="text" name="otherBoard" value=<?php echo $data['otherBoard'];?> required/> </td>
+		</tr>
+		<tr>
+			<td>otherDoR </td>
 			<td><input type="date" name="otherDoR" value=<?php echo $data['otherDoR'];?> required/> </td>
 		</tr>
 
