@@ -82,7 +82,7 @@ $data =mysqli_fetch_assoc($run);
 		</tr>
 		<tr>
 			<td>Parents Mobile No.</td>
-			<td><input type="tel" name="parentNumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value=<?php echo $data['parentNumber'];?>/> </td>
+			<td><input type="tel" name="parentNumber" pattern="[0-9]{3}[0-9]{4}[0-9]{3}" value=<?php echo $data['parentNumber'];?>/> </td>
 		</tr>
 		<tr>
 			<td>Email-Id</td>
